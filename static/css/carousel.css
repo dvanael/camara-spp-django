@@ -1,0 +1,65 @@
+
+.container-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.carousel {
+  position: relative;
+  @media screen and (min-width: 1024px) {
+    width: 60vw;
+  }
+}
+
+.carousel .btn {
+  display: none;
+  @media screen and (min-width: 576px) {
+    display: block
+  }
+}
+.carousel .btn.prev-carousel {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -5%;
+}
+
+.carousel .btn.next-carousel {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -5%;
+}
+
+.carousel-list {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+
+  &::-webkit-scrollbar{
+    height: 0.3rem;
+    border-radius: var(--default-radius);
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--background-500);
+    border-radius: var(--default-radius);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: blue;
+    border-radius: 20px;
+  }
+  @media screen and (min-width: 576px) {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.carousel .item {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}

@@ -1,0 +1,32 @@
+.img-forms {
+    object-fit: cover;
+}
+
+#InputName, #InputEmail, #InputDesc {
+    height: 40px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1px solid var(--accent-950);
+    &:focus{
+    border: 1px solid var(--accent-400);
+    }
+    @media screen and (min-width: 1024px) {
+        width: 30rem;
+    }
+}
+
+#InputDesc {
+    height: 90px;
+}
+
+.InputDesc-ouvidoria {
+    height: 200px;
+}
+
+.esic-title h1{
+  font-size: 2.5rem;
+}
+.esic-title p{
+    font-size: 1.4rem;
+    width: 20rem;
+}

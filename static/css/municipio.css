@@ -1,0 +1,23 @@
+
+.municipio-section h1, .historia-section h2 {
+  text-align: center;
+  color: var(--text-950);
+}
+
+h1{
+  font-size: 3rem;
+}
+
+h2{
+  font-size: 2.5rem;
+}
+
+p {
+  text-align: justify;
+  color: var(--text-950);
+  line-height: 1.6;
+}
+
+.municipio-img{
+  margin-block: 1rem;
+}

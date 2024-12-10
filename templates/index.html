@@ -1,5 +1,291 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
-<h1>Hello World</h1>
-{% endblock content %}
+<main>
+  <section id="search">
+    <form action="" method="get">
+      <fieldset role="group">
+        <input class="input-search" type="text" name="search" id="id-search" placeholder="O que você procura?">
+        <button class="btn btn-search" type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </fieldset>
+    </form>
+  </section>
+
+  <section class="container-carousel" id="carousel">
+    <div class="carousel">
+      <button class="btn btn-rounded next-carousel">
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+      <button class="btn btn-rounded prev-carousel">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+      <div class="carousel-list">
+        <img class="item" src="{% static 'img/carousel/foto-1.jpg' %}" alt="Lorem">
+        <img class="item" src="{% static 'img/carousel/foto-2.jpg' %}" alt="Lorem">
+        <img class="item" src="{% static 'img/carousel/foto-3.jpg' %}" alt="Lorem">
+        <img class="item" src="{% static 'img/carousel/foto-4.jpg' %}" alt="Lorem">
+      </div>
+    </div>
+  </section>
+
+  <section id="quick-access">
+    <details>
+      <summary class="quick-access-accordion">Acesso Rápido</summary>
+      <div class="quick-access-list">
+        <div class="item">
+          <a href="">
+            <i class="fa-solid fa-file-alt"></i>
+            <span>Requerimentos</span>
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <i class="fa-solid fa-archive"></i>
+            <span>Portarias</span>
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <i class="fa-solid fa-balance-scale"></i>
+            <span>Portal da Transparência</span>
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <i class="fa-solid fa-gavel"></i>
+            <span>Projetos de Lei</span>
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <i class="fa-solid fa-scroll"></i>
+            <span>Resoluções</span>
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <i class="fa-solid fa-newspaper"></i>
+            <span>Diário Oficial</span>
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <i class="fa-solid fa-city"></i>
+            <span>Leis Municipais</span>
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>PPA</span>
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <i class="fa-solid fa-users"></i>
+            <span>Comissões</span>
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <i class="fa-solid fa-file-invoice"></i>
+            <span>LDO</span>
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <i class="fa-solid fa-briefcase"></i>
+            <span>Atos da Mesa</span>
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <i class="fa-solid fa-calendar-alt"></i>
+            <span>Sessões</span>
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <i class="fa-solid fa-coins"></i>
+            <span>LOA</span>
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <i class="fa-solid fa-landmark"></i>
+            <span>Prefeitura</span>
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <i class="fa-solid fa-file-contract"></i>
+            <span>Licitações</span>
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <i class="fa-solid fa-gavel"></i>
+            <span>Regimento Interno</span>
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <i class="fa-solid fa-chart-pie"></i>
+            <span>Receitas</span>
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <i class="fa-solid fa-handshake"></i>
+            <span>FECAM</span>
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <i class="fa-solid fa-book"></i>
+            <span>Lei Orgânica</span>
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <i class="fa-solid fa-money-bill-wave"></i>
+            <span>Despesas</span>
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <i class="fa-solid fa-flag"></i>
+            <span>Governo do Estado</span>
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <i class="fa-solid fa-university"></i>
+            <span>A Câmara</span>
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <i class="fa-solid fa-user-friends"></i>
+            <span>Vereadores</span>
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <i class="fa-solid fa-users-cog"></i>
+            <span>Mesa Diretora</span>
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <i class="fa-solid fa-gavel"></i>
+            <span>Regimento Interno</span>
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <i class="fa-solid fa-address-book"></i>
+            <span>Ex-Presidentes</span>
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <i class="fa-solid fa-pencil-alt"></i>
+            <span>Emendas Impositivas</span>
+          </a>
+        </div>
+        <div class="item">
+          <a href="">
+            <i class="fa-solid fa-lightbulb"></i>
+            <span>Indicações</span>
+          </a>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <section id="vereadores">
+    <div class="vereadores">
+      <h1>Vereadores</h1>
+      <div class="carousel vereadores-carousel">
+        <button class="btn btn-rounded next-carousel" id="next-vereador">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <button class="btn btn-rounded prev-carousel" id="prev-vereador">
+        <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <div class="vereadores-list">
+          <div class="card">
+            <img src="{% static 'img/vereadores/foto-1.jpg' %}" alt="">
+            <span>Allysson Lindálrio</span>
+          </div>
+          <div class="card">
+            <img src="{% static 'img/vereadores/foto-2.jpg' %}" alt="">
+            <span>Carlos Sérgio</span>
+          </div>
+          <div class="card">
+            <img src="{% static 'img/vereadores/foto-3.jpg' %}" alt="">
+            <span>Elias Júnior</span>
+          </div>
+          <div class="card">
+            <img src="{% static 'img/vereadores/foto-4.jpg' %}" alt="">
+            <span>Geraldo Cunha</span>
+          </div>
+          <div class="card">
+            <img src="{% static 'img/vereadores/foto-5.jpg' %}" alt="">
+            <span>Getúlio Antunes</span>
+          </div>
+          <div class="card">
+            <img src="{% static 'img/vereadores/foto-6.jpg' %}" alt="">
+            <span>Jefferson Inácio</span>
+          </div>
+          <div class="card">
+            <img src="{% static 'img/vereadores/foto-7.jpg' %}" alt="">
+            <span>João Cabral</span>
+          </div>
+          <div class="card">
+            <img src="{% static 'img/vereadores/foto-8.jpg' %}" alt="">
+            <span>João Paulo</span>
+          </div>
+          <div class="card">
+            <img src="{% static 'img/vereadores/foto-9.jpg' %}" alt="">
+            <span>Maria Aparecida</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about-camara">
+    <div class="about-camara">
+      <h1>Sobre a Câmara</h1>
+      <div class="content">
+        <div class="img">
+          <img src="{% static 'img/camara/foto-frontal.jpg' %}" alt="Lorem">
+        </div>
+        <div>
+          <p>
+            A Câmara Municipal de São Paulo do Potengi é o órgão de representação do poder legislativo municipal de São Paulo do Potengi, município brasileiro do Estado do Rio Grande do Norte. É composta por 11 vereadores eleitos por voto proporcional para um mandato de 4 anos. Atualmente funciona no Palácio do Povo.
+          </p>
+          <p>
+            Até o ano de 1998, a Câmara Municipal de São Paulo do Potengi localizava-se na Rua Bento Urbano nº 217. Em 1999, durante a gestão do presidente Domingos Sávio Dias Campos foi construída uma nova sede e inaugurada em 30 de dezembro do mesmo ano. A Câmara Municipal passou a situar-se na Rua José Claudino nº418, no bairro Santos Dumont, em um prédio maior, onde funciona atualmente.
+          </p>
+          <p>
+            Em 2017 na gestão do presidente Allysson Lindálrio Marques Guedes a Câmara passou por uma grande reforma com destaque para construção, reforma e/ou adequação de 11 gabinetes, um para cada vereador.
+          </p>
+          <p>
+            Em 2021 o vereador presidente Getúlio Antunes realizou uma reforma que modernizou a fachada do prédio e também o gabinete do presidente.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'js/carousel.js' %}"></script>
+{% endblock js %}

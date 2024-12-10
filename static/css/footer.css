@@ -1,0 +1,85 @@
+
+.footer{
+  background-color: var(--primary-500);
+}
+
+footer{
+  display: flex;
+  flex-direction: column-reverse;
+  padding-block: 1.5rem 0.5rem;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+
+footer *{
+  color: var(--text-100);
+}
+
+footer .socials{
+  margin-bottom: 2rem;
+  @media screen and (min-width: 768px) {
+    margin-left: auto;
+  }
+}
+footer .socials h1{
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+footer .socials .list{
+  font-size: 3rem;
+  display: flex;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+footer .socials .list a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
+  padding: 0.5rem;
+  border: var(--secondary-300) 0.2rem solid;
+  border-radius: var(--default-radius);
+  text-decoration: none;
+  width: 4rem;
+  height: 4rem;
+  &:hover{
+    scale: 1.1;
+  }
+}
+
+footer .channels{
+  display: flex;
+  gap: 2rem;
+}
+footer .channels img{
+  display: none;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  @media screen and (min-width: 1024px) {
+    display: block;
+    width: 8rem;
+  }
+}
+
+footer .channels ul li{
+  list-style: none;
+  &:first-child{
+    font-size: 1.5rem;
+    text-transform: uppercase ;
+    font-weight: 600;
+  }
+}
+
+footer .channels ul:first-child{
+  font-size: 1.5rem;
+  background-color: aqua;
+}
+
+footer .channels ul li span{
+  text-transform: uppercase;
+  font-weight: 600;
+}
