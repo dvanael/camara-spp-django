@@ -17,7 +17,7 @@ class ProjetoDeLei(models.Model):
     )
 
     numero = models.CharField(max_length=7, verbose_name="Número")
-    descrição = models.CharField(max_length=255, verbose_name="Descrição")
+    descricao = models.CharField(max_length=255, verbose_name="Descrição")
     documento = models.URLField(verbose_name="Link do Documento")
     status = models.CharField(
         max_length=20, choices=STATUS_CHOICES, verbose_name="Status"
@@ -29,4 +29,4 @@ class ProjetoDeLei(models.Model):
         verbose_name_plural = "Projetos de Lei"
 
     def __str__(self):
-        return f"PL {self.numero} - {self.descrição}"
+        return f"PL {self.numero} - {self.descricao}"
