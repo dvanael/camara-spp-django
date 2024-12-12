@@ -30,3 +30,16 @@ class ProjetoDeLei(models.Model):
 
     def __str__(self):
         return f"PL {self.numero} - {self.descricao}"
+
+
+class ExPresidente(models.Model):
+    nome = models.CharField(max_length=255, verbose_name="Nome")
+    periodo = models.CharField(max_length=255, verbose_name="Período")
+    foto = models.URLField(verbose_name="Foto")
+
+    class Meta:
+        verbose_name = "Ex-Presidente"
+        verbose_name_plural = "Ex-Presidentes"
+
+    def __str__(self):
+        return self.nome

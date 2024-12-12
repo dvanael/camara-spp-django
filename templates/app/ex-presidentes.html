@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block css %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <link rel="stylesheet" href="{% static 'css/galeria.css' %}">
 {% endblock css %}
 {% block content %}
@@ -14,75 +15,18 @@
 
     <h1>GALERIA DOS EX-PRESIDENTES</h1>
     <section class="galeria">
+    {% for expresidente in object_list %}
         <div class="card">
-            <img class="card-img" src="{% static 'img/ex-presidentes/foto-1.png' %}" alt="">
+            <img class="card-img" src="{{ expresidente.foto }}" alt="Foto de {{ expresidente.nome }}">
             <div class="card-info">
-                <span>Domingos Sávio Dias Campos</span>
+                <span>{{ expresidente.nome }}</span>
                 <p>
-                  1998, 1999, 2004, 2013, 2014, 2015, 2016
+                  {{ expresidente.periodo }}
                 </p>
             </div>
         </div>
-
-        <div class="card">
-          <img class="card-img" src="{% static 'img/ex-presidentes/foto-2.png' %}" alt="">
-          <div class="card-info">
-              <span>Maria Nini de Araújo Souto</span>
-              <p>
-                2003
-              </p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img class="card-img" src="{% static 'img/ex-presidentes/foto-3.png' %}" alt="">
-          <div class="card-info">
-              <span>Maria Neci de Oliveira Soares</span>
-              <p>
-                2005, 2006
-              </p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img class="card-img" src="{% static 'img/ex-presidentes/foto-4.png' %}" alt="">
-          <div class="card-info">
-              <span>Maria Nericivan A. C. Meira</span>
-              <p>
-                2007, 2008, 2011, 2012
-              </p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img class="card-img" src="{% static 'img/ex-presidentes/foto-5.png' %}" alt="">
-          <div class="card-info">
-              <span> Allysson Lindalrio M. Guedes</span>
-              <p>
-                2017, 2018
-              </p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img class="card-img" src="{% static 'img/ex-presidentes/foto-6.png' %}" alt="">
-          <div class="card-info">
-              <span>Diogo José de Araújo Alves</span>
-              <p>
-                2019, 2020
-              </p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img class="card-img" src="{% static 'img/ex-presidentes/foto-7.png' %}" alt="">
-          <div class="card-info">
-              <span>Getúlio Barbosa Antunes</span>
-              <p>
-                2021, 2022
-              </p>
-          </div>
-        </div>
-
-    </section>
+    {% endfor %}
+  </section>
+  {% include "components/pagiantion.html" %}
 {% endblock %}
+

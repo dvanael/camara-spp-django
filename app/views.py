@@ -1,6 +1,6 @@
 from django.views.generic import ListView
 from django.shortcuts import render
-from .models import ProjetoDeLei
+from .models import ProjetoDeLei, ExPresidente
 
 
 # Create your views here.
@@ -24,9 +24,11 @@ def esic(request):
     return render(request, template)
 
 
-def ex_presidentes(request):
-    template = "app/ex-presidentes.html"
-    return render(request, template)
+class ExPresidentesView(ListView):
+    model = ExPresidente
+    template_name = "app/ex-presidentes.html"
+    context_object_name = "object_list"
+    paginate_by = 3
 
 
 class ProjetosDeLeiView(ListView):
