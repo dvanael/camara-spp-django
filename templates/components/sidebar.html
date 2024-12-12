@@ -24,9 +24,9 @@
       <details class="item nav-item-link">
         <summary>Transparência</summary>
         <ul>
-          <li><a href="">...</a></li>
-          <li><a href="{% url 'ex-presidentes' %}"> Ex-Presidentes</a></li>
-          <li><a href="{% url 'projetos-de-lei' %}">Projetos de Lei</a></li>
+          <li><a href="" class="{% if request.resolver_match.url_name == '' %}active-link{% endif %}">...</a></li>
+          <li><a href="{% url 'ex-presidentes' %}" class="{% if request.resolver_match.url_name == 'ex-presidentes' %}active-link{% endif %}"> Ex-Presidentes</a></li>
+          <li><a href="{% url 'projetos-de-lei' %}" class="{% if request.resolver_match.url_name == 'projetos-de-lei' %}active-link{% endif %}">Projetos de Lei</a></li>
         </ul>
       </details>
     </li>

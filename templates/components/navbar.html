@@ -9,10 +9,10 @@
       <li><button class="btn btn-rounded btn-menu">&#9776;</button></li>  
     </ul>
     <ul class="nav-menu d-none-mobile">
-      <li><a class="nav-item-link active-link" href="{% url 'index' %}">Início</a></li>
-      <li><a class="nav-item-link" href="{% url 'municipio' %}">Município</a></li>
-      <li><a class="nav-item-link" href="{% url 'ouvidoria' %}">Ouvidoria</a></li>
-      <li><a class="nav-item-link" href="{% url 'esic' %}">E-Sic</a></li>
+      <li><a class="nav-item-link {% if request.resolver_match.url_name == '' %}active-link{% endif %}" href="{% url 'index' %}">Início</a></li>
+      <li><a class="nav-item-link {% if request.resolver_match.url_name == 'municipio' %}active-link{% endif %}" href="{% url 'municipio' %}">Município</a></li>
+      <li><a class="nav-item-link {% if request.resolver_match.url_name == 'ouvidoria' %}active-link{% endif %}" href="{% url 'ouvidoria' %}">Ouvidoria</a></li>
+      <li><a class="nav-item-link {% if request.resolver_match.url_name == 'esic' %}active-link{% endif %}" href="{% url 'esic' %}">E-Sic</a></li>
       <li class="d-none-mobile"><button class="btn bnt-menu btn-rounded" id="open-sidebar">&#9776;</button></li>
     </ul>
   </nav>
