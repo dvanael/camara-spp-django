@@ -280,3 +280,12 @@ section {
     scale: 1.05;
   }
 }
+
+.active-year{
+  background-color: transparent !important;
+  border: var(--primary-400) 0.1rem solid !important;
+  color: var(--text-900);
+  &:hover{
+    color: var(--text-900);
+  }
+}

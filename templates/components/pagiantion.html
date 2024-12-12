@@ -1,0 +1,35 @@
+<nav aria-label="Page navigation example" class=" d-flex align-items-center justify-content-center my-3">
+  <ul class="pagination ">
+
+  
+  <!-- PÁGINA ANTERIOR -->
+      {% if page_obj.has_previous %}  
+      <li class="page-item">
+          <a class="btn page-link text-white bg-dark" href="?page={{ page_obj.previous_page_number }}{% if search %}&search={{ search }}{% endif %}{% if ano_selected %}&ano={{ ano_selected }}{% endif %}">ANTERIOR</a>
+      {%else%}
+      <li class="page-item disabled">
+          <a class="btn page-link text-white-50 bg-dark" href="?page=1{% if search %}&search={{ search }}{% endif %}{% if ano_selected %}&ano={{ ano_selected }}{% endif %}">ANTERIOR</a>
+      {%endif%}
+      </li>
+
+  <!-- PÁGINA ATUAL -->
+  <li class="page-item disabled">
+      <div class="btn page-link current text-white bg-dark">
+          PÁGINA {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
+      </div></li>
+
+  <!-- PROXIMA PAGINA -->
+      {% if page_obj.has_next %}
+      <li class="page-item">
+          <a class="btn page-link text-white bg-dark" href="?page={{ page_obj.next_page_number }}{% if search %}&search={{ search }}{% endif %}{% if ano_selected %}&ano={{ ano_selected }}{% endif %}">PRÓXIMA</a>
+      {%else%}
+      <li class="page-item disabled">
+          <a class="btn page-link text-white-50 bg-dark" href="?page={{ page_obj.paginator.num_pages }}{% if search %}&search={{ search }}{% endif %}{% if ano_selected %}&ano={{ ano_selected }}{% endif %}">PRÓXIMA</a>
+      {%endif%}
+      </li>
+      </li>
+  </ul>
+</nav>
+
+
+
