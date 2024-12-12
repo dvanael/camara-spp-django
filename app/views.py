@@ -1,7 +1,7 @@
 from django.views.generic import ListView
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import ProjetoDeLei, ExPresidente
-
+from .forms import ESICForm, OuvidoriaForm
 
 # Create your views here.
 def index(request):
@@ -16,12 +16,27 @@ def municipio(request):
 
 def ouvidoria(request):
     template = "app/ouvidoria.html"
-    return render(request, template)
+    context = {}
 
+    form = OuvidoriaForm()
+    context["form"] = form
+
+    if request.method == "POST":
+        context["form_sended"] = True
+
+    return render(request, template, context)
 
 def esic(request):
     template = "app/esic.html"
-    return render(request, template)
+    context = {}
+
+    form = ESICForm()
+    context["form"] = form
+
+    if request.method == "POST":
+        context["form_sended"] = True
+
+    return render(request, template, context)
 
 
 class ExPresidentesView(ListView):
