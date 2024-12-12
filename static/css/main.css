@@ -289,3 +289,14 @@ section {
     color: var(--text-900);
   }
 }
+.page-link{
+  text-decoration: none;
+}
+
+.disabled *{
+  color: var(--accent-300);
+  &:hover{
+    scale: 1 !important;
+    color: var(--accent-300);
+  }
+}
