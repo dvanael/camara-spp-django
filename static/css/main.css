@@ -300,3 +300,7 @@ section {
     color: var(--accent-300);
   }
 }
+
+.asteriskField{
+  display: none;
+}
