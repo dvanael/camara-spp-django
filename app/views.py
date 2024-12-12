@@ -43,14 +43,14 @@ class ExPresidentesView(ListView):
     model = ExPresidente
     template_name = "app/ex-presidentes.html"
     context_object_name = "object_list"
-    paginate_by = 3
+    paginate_by = 12
 
 
 class ProjetosDeLeiView(ListView):
     model = ProjetoDeLei
     template_name = "app/projetos-de-lei.html"
     context_object_name = "object_list"
-    paginate_by = 2
+    paginate_by = 5
 
     def get_queryset(self):
         queryset = super().get_queryset()
