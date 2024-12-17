@@ -4,9 +4,9 @@
 {% block content %}
 <main>
   <section id="search">
-    <form action="" method="get">
+    <form action="{% url 'search' %}" method="get">
       <fieldset role="group">
-        <input class="input-search" type="text" name="search" id="id-search" placeholder="O que você procura?">
+        <input class="input-search" type="text" name="q" id="id-search" placeholder="O que você procura?">
         <button class="btn btn-search" type="submit">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>

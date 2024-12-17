@@ -1,7 +1,8 @@
 from django.views.generic import ListView
 from django.shortcuts import render, redirect
-from .models import ProjetoDeLei, ExPresidente
+from .models import ProjetoDeLei, ExPresidente, Pagina
 from .forms import ESICForm, OuvidoriaForm
+
 
 # Create your views here.
 def index(request):
@@ -25,6 +26,7 @@ def ouvidoria(request):
         context["form_sended"] = True
 
     return render(request, template, context)
+
 
 def esic(request):
     template = "app/esic.html"
@@ -73,3 +75,15 @@ class ProjetosDeLeiView(ListView):
         context["search"] = self.request.GET.get("search", "")
         context["ano_selected"] = self.request.GET.get("ano")
         return context
+
+
+def search_pages(request):
+    template = "search.html"
+    context = {}
+
+    query = request.GET.get("q", "")
+    context["query"] = query
+
+    pages = Pagina.objects.filter(nome__icontains=query)
+    context["pages"] = pages
+    return render(request, template, context)
