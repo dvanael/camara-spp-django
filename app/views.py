@@ -87,3 +87,13 @@ def search_pages(request):
     pages = Pagina.objects.filter(nome__icontains=query)
     context["pages"] = pages
     return render(request, template, context)
+
+
+def erro_404(request):
+    template = "404.html"
+    return render(request, template)
+
+
+def erro_500(request):
+    template = "500.html"
+    return render(request, template)

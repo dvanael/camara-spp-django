@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% block navbar %}{% endblock navbar %}
+{% block footer %}{% endblock footer %}
+{% block content %}
+<div class="container">
+  <div class="content-container h-75 accordion center-element">
+    <div class="">
+      <div class="h1 text-center ">Erro 404</div>
+      <div class="h2 text-center ">Essa página não foi encontrada . . .</div>
+      <div class="text-center h3 mb-3">Entre em <a target="_blank" href="https://github.com/dvanael/">contato conosco.</a></div>
+      <div class="text-center h3 mb-3">
+        <form action="{% url 'search' %}" method="get">
+          <fieldset role="group">
+            <input class="input-search" type="text" name="q" id="id-search" placeholder="O que você procura? CTRL+P">
+            <button class="btn btn-search" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </fieldset>
+        </form>
+      </div>
+      <div class="text-center h3 ">Volte para o <a href="{% url 'index' %}">início.</a></div>
+    </div>
+  </div>
+</div>
+{% endblock %}
