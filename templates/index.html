@@ -6,7 +6,7 @@
   <section id="search">
     <form action="{% url 'search' %}" method="get">
       <fieldset role="group">
-        <input class="input-search" type="text" name="q" id="id-search" placeholder="O que você procura?">
+        <input class="input-search" type="text" name="q" id="id-search" placeholder="O que você procura? CTRL+P">
         <button class="btn btn-search" type="submit">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
@@ -288,4 +288,5 @@
 
 {% block js %}
 <script src="{% static 'js/carousel.js' %}"></script>
+<script src="{% static 'js/search.js' %}"></script>
 {% endblock js %}

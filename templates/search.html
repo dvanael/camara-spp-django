@@ -1,9 +1,26 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-{% for page in pages %}
-<div class="">
-  <a href="{{page.url}}">{{page.nome}}</a>
-</div>
-{% endfor %}
+<main>
+  <section id="search">
+    <form action="{% url 'search' %}" method="get">
+      <fieldset role="group">
+        <input class="input-search" type="text" name="q" id="id-search" placeholder="O que você procura? CTRL+P">
+        <button class="btn btn-search" type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </fieldset>
+    </form>
+  </section>
+  {% for page in pages %}
+    <div class="">
+      <a href="{{page.url}}">{{page.nome}}</a>
+    </div>
+  {% empty %}
+    <div> Nenhum resultado. Pesquise novamente.</div>
+  {% endfor %}
+</main>
 {% endblock content %}
+{% block js %}
+<script src="{% static 'js/search.js' %}"></script>
+{% endblock js %}
