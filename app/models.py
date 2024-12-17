@@ -1,7 +1,6 @@
 from django.db import models
 
 
-# Create your models here.
 class ProjetoDeLei(models.Model):
     ANO_CHOICES = (
         (2021, "2021"),
@@ -40,6 +39,18 @@ class ExPresidente(models.Model):
     class Meta:
         verbose_name = "Ex-Presidente"
         verbose_name_plural = "Ex-Presidentes"
+
+    def __str__(self):
+        return self.nome
+
+
+class Pagina(models.Model):
+    nome = models.CharField(max_length=255, verbose_name="Nome")
+    url = models.CharField(max_length=255, unique=True, verbose_name="URL")
+
+    class Meta:
+        verbose_name = "Página"
+        verbose_name_plural = "Páginas"
 
     def __str__(self):
         return self.nome
