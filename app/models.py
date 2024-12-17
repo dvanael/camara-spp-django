@@ -46,7 +46,9 @@ class ExPresidente(models.Model):
 
 class Pagina(models.Model):
     nome = models.CharField(max_length=255, verbose_name="Nome")
-    url = models.CharField(max_length=255, unique=True, verbose_name="URL")
+    url = models.CharField(
+        max_length=255, unique=True, verbose_name="URL", help_text="Exemplo. /exemplo/"
+    )
 
     class Meta:
         verbose_name = "Página"
