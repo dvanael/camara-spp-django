@@ -67,6 +67,7 @@ class ProjetosDeLeiView(ListView):
         if ano:
             queryset = queryset.filter(ano=int(ano))
 
+        queryset = queryset.order_by("-ano")
         return queryset
 
     def get_context_data(self, **kwargs):
