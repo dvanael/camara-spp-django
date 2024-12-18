@@ -1,0 +1,40 @@
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  /* border: 2px solid var(--background-200); */
+  background-color: var(--background-150);
+  width: 45vw;
+  padding: 3rem;
+}
+
+.error-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.error-subtitle {
+  font-size: 1.5rem;
+}
+
+.error-link {
+  color: var(--primary-500);
+  &:hover{
+    color: var(--primary-300);
+  }
+}
+
+.search-form{
+  width: 35vw;
+}
