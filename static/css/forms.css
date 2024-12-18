@@ -6,9 +6,9 @@
     height: 40px;
     border-radius: 10px;
     background-color: transparent;
-    border: 1px solid var(--accent-950);
+    border: var(--border-size) solid var(--accent-950);
     &:focus{
-    border: 1px solid var(--accent-400);
+    border: var(--border-size) solid var(--accent-400);
     }
     @media screen and (min-width: 1024px) {
         width: 30rem;

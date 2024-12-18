@@ -5,6 +5,7 @@
     /* Border Radius */
     --rounded-radius: 50%;
     --default-radius: 0.5rem;
+    --border-size: 2px;
 }
 
 /* @media (prefers-color-scheme: light) and (prefers-color-scheme: dark) { */
@@ -190,16 +191,28 @@ section {
 }
 
 .input-search{
+  border: var(--text-950) var(--border-size) solid;
   border-radius: 25rem;
   background-color: transparent;
   &:focus{
-    border: none;
+    border: var(--primary-500) var(--border-size) solid;
+    box-shadow: none !important;
+  }
+  &:not(:focus){
+    border: var(--text-950) var(--border-size) solid !important;
   }
 }
 
 .btn-search{
   border-radius: var(--default-radius);
   width: 30% !important;
+  &:hover{
+    scale: 1.05;
+  }
+  &:focus{
+    box-shadow: none;
+    border: var(--text-950) var(--border-size) solid;
+  }
 }
 
 .about-camara h1{
@@ -283,7 +296,7 @@ section {
 
 .active-year{
   background-color: transparent !important;
-  border: var(--primary-400) 0.1rem solid !important;
+  border: var(--primary-400) var(--border-size) solid !important;
   color: var(--text-900);
   &:hover{
     color: var(--text-900);

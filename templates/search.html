@@ -1,24 +1,30 @@
 {% extends "base.html" %}
 {% load static %}
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/search.css' %}">
+{% endblock css %}
 {% block content %}
 <main>
   <section id="search">
+    <h1>O que você procura?</h1>
     <form action="{% url 'search' %}" method="get">
       <fieldset role="group">
-        <input class="input-search" type="text" name="q" id="id-search" placeholder="O que você procura? CTRL+P">
+        <input class="input-search" type="text" name="q" value="{{query}}" id="id-search" placeholder="O que você procura? CTRL+P">
         <button class="btn btn-search" type="submit">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </fieldset>
     </form>
+    {% for page in pages %}
+    <a href="{{page.url}}">
+      <div class="result">
+        {{page.nome}}
+      </div>
+    </a>
+    {% empty %}
+      <h2> Nenhum resultado. Pesquise novamente.</p>
+    {% endfor %}
   </section>
-  {% for page in pages %}
-    <div class="">
-      <a href="{{page.url}}">{{page.nome}}</a>
-    </div>
-  {% empty %}
-    <div> Nenhum resultado. Pesquise novamente.</div>
-  {% endfor %}
 </main>
 {% endblock content %}
 {% block js %}

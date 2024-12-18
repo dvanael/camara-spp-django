@@ -1,0 +1,19 @@
+
+.result {
+  border: 2px solid var(--text-950);
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: var(--default-radius);
+  text-transform: uppercase;
+  font-weight: 700;
+  &:hover {
+    scale: 1.03;
+    background-color: var(--primary-400);
+    color: var(--background-50);
+    font-size: 1.1rem;
+  }
+}
+
+a {
+  text-decoration: none;
+}
