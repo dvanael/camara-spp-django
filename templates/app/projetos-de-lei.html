@@ -44,7 +44,7 @@
       </div>
       {% for projeto in object_list %}
       <div class="list-group-item d-flex justify-content-between align-items-center">
-            <a  href="{{projeto.documento}}" class="document-link text-decoration-none">
+            <a target="_blank" href="{{projeto.documento}}" class="document-link text-decoration-none">
               <i class='bx bxs-file-pdf fs-3 icone-pdf'></i> {{ projeto }}
             </a>
             <span class="badge badge-status {% if projeto.status == 'Aprovado' %}bg-success{% elif projeto.status == 'Em Análise' %}bg-warning{% else %}bg-danger{% endif %} me-3" title="{{ projeto.status }}"><i class="bx {% if projeto.status == 'Aprovado' %}bx-check{% elif projeto.status == 'Em Análise' %}bxs-analyse{% else %}bx-x{% endif %}"  ></i></span>
