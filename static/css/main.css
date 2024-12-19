@@ -317,3 +317,12 @@ section {
 .asteriskField{
   display: none;
 }
+
+.form-control{
+  border-radius: var(--default-radius);
+  border: var(--text-950) var(--border-size) solid;
+  &:focus{
+    border: var(--primary-500) var(--border-size) solid !important;
+    box-shadow: none;
+  }
+}

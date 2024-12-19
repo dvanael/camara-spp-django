@@ -18,14 +18,14 @@
 
   <h1>PROJETOS DE LEI</h1>
     <div class="nav-content">
-      <form class="d-flex gap-3 justify-content-center align-items-center" role="search-filter">
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" name="search" value="{{search}}" placeholder="Pesquise um PL . . ." aria-label="Recipient's username" aria-describedby="button-addon2">
-          <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+      <form class="row d-flex gap-3 justify-content-center align-items-center" role="search-filter">
+        <div class="col-12 input-group">
+          <input type="text" class="form-control mb-0" name="search" value="{{search}}" placeholder="Pesquise um PL . . ." aria-label="Recipient's username" aria-describedby="button-addon2">
+          <button class="btn btn-outline-secondary m-0" type="button" id="button-addon2">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
-        <div class="btn-group gap-3 mb-4" role="group">
+        <div class="col-12 btn-group gap-1 mb-3" role="group">
           <button type="submit" name="ano" value="" class="btn {% if ano_selected == "" %}active-year{% endif %}">
             Todos Anos
           </button>

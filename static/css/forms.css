@@ -1,5 +1,8 @@
 .img-forms {
     object-fit: cover;
+    @media screen and (max-width: 576px) {
+        width: 50%;
+    }
 }
 
 #InputName, #InputEmail, #InputDesc {
