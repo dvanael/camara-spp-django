@@ -20,6 +20,7 @@
     position: fixed;
     width: 100vw;
     height: 100vh;
+    top: 0;
     left: 0;
     background-color: var(--background-50);
     z-index: 90;
