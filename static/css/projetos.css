@@ -1,0 +1,14 @@
+
+.projetos-form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-direction: row;
+  margin-bottom: 1.5rem;
+  @media screen and (max-width: 576px) {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 0.5rem;
+  }
+}

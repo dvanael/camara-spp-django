@@ -16,6 +16,11 @@ main {
   background-color: var(--background-150);
   width: 45vw;
   padding: 3rem;
+  @media screen and (max-width: 576px) {
+    width: 100vw;
+    padding-block: 0 ;
+    padding-inline: 0.7rem ;
+  }
 }
 
 .error-title {
@@ -26,6 +31,9 @@ main {
 
 .error-subtitle {
   font-size: 1.5rem;
+  @media screen and (max-width: 576px) {
+    font-size: 1.3rem;
+  }
 }
 
 .error-link {
@@ -37,4 +45,7 @@ main {
 
 .search-form{
   width: 35vw;
+  @media screen and (max-width: 576px) {
+    width: 85vw;
+  }
 }
