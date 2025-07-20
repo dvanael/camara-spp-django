@@ -95,6 +95,12 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+- Crie as variáveis de ambiente
+
+```bash
+python scripts/env.py
+```
+
 - Faça as migrações necessárias
 
 ```bash
