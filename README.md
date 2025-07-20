@@ -37,7 +37,22 @@ As funcionalidades implementadas no **Django**:
 
 ## Apresentação
 
-Imagens do site funcionando.
+Gravações e imagens do site funcionando.
+
+<img width="800" height="503" alt="image" src="https://github.com/user-attachments/assets/4d72e1a0-58a9-4b12-a8ad-7143cc8dc145" />
+
+
+---
+
+**Página de resultados de pesquisa**
+
+<img width="1315" height="943" alt="image" src="https://github.com/user-attachments/assets/5420adce-be65-42df-9a40-0eb8b7c7b1a6" />
+
+---
+
+**Tabela de projetos de lei com filtragem**
+
+<img width="1302" height="947" alt="image" src="https://github.com/user-attachments/assets/a91ce342-8138-44f9-85cc-d532edba5377" />
 
 ---
 
