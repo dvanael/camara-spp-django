@@ -3,7 +3,7 @@
 
 **Projeto de Interface do Usuário**
 
-[Sobre](#sobre) • [Apresentação](#apresentação) • [Tecnologias](#tecnologias) • [Colabodores](#colaboradores)
+[Sobre](#sobre) • [Tecnologias](#tecnologias) • [Apresentação](#apresentação) • [Colabodores](#colaboradores)
 
 ---
 
@@ -21,7 +21,7 @@ Esse projeto é a continuidade de um frontend estático, acesse o repositório [
 
 ---
 
-## Funcionalidades
+### Funcionalidades
 
 As funcionalidades implementadas no **Django**:
 
@@ -32,28 +32,7 @@ As funcionalidades implementadas no **Django**:
 - **Paginação** de objetos
 
 - **Formulários funcionais** com notificação de envio
-
----
-
-## Apresentação
-
-Gravações e imagens do site funcionando.
-
-<img width="800" height="503" alt="image" src="https://github.com/user-attachments/assets/4d72e1a0-58a9-4b12-a8ad-7143cc8dc145" />
-
-
----
-
-**Página de resultados de pesquisa**
-
-<img width="1315" height="943" alt="image" src="https://github.com/user-attachments/assets/5420adce-be65-42df-9a40-0eb8b7c7b1a6" />
-
----
-
-**Tabela de projetos de lei com filtragem**
-
-<img width="1302" height="947" alt="image" src="https://github.com/user-attachments/assets/a91ce342-8138-44f9-85cc-d532edba5377" />
-
+  
 ---
 
 ## Tecnologias
@@ -76,6 +55,27 @@ Cores usadas no projeto.
 | Preto       | ![#0C0D0D](https://placehold.co/20x20/0c0d0d/0c0d0d) #0C0D0D |
 | Azul       | ![#0B45F4](https://placehold.co/20x20/0b45f4/0b45f4) #0B45F4 |
 | Azul Pastel       | ![#668CFF](https://placehold.co/20x20/668cff/668cff) #668CFF |
+
+---
+
+## Apresentação
+
+Gravações e imagens do site funcionando.
+
+<img width="800" height="503" alt="image" src="https://github.com/user-attachments/assets/4d72e1a0-58a9-4b12-a8ad-7143cc8dc145" />
+
+
+---
+
+**Página de resultados de pesquisa**
+
+<img width="1315" height="943" alt="image" src="https://github.com/user-attachments/assets/5420adce-be65-42df-9a40-0eb8b7c7b1a6" />
+
+---
+
+**Tabela de projetos de lei com filtragem**
+
+<img width="1302" height="947" alt="image" src="https://github.com/user-attachments/assets/a91ce342-8138-44f9-85cc-d532edba5377" />
 
 ---
 
